@@ -1,0 +1,68 @@
+.parent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  padding: 10rem;
+}
+
+body{
+  background-color: #F8F8FF;
+}
+
+ul{
+  list-style: none;
+}
+
+.menu{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addTask{
+  display: flex;
+  gap: 5px;
+}
+
+.menu input{
+  height: 30px;
+}
+
+.menu button{
+  height: 36px;
+}
+
+.taskContainer{
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 16px;
+}
+
+.tasks{
+  background-color: #ECEDF6;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 16px;
+}
+.task{
+  background-color: white;
+  width: 100%;
+  border-radius: 16px;
+  padding: 10px;
+  height: 50px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.trash{
+  cursor: pointer;
+}
