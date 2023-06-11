@@ -76,7 +76,7 @@ export default function App() {
         onChange={() => handleCheckBoxChange(task.id)}
       />
       {task.id === editingTaskId && editing ? (
-        <div className="editTaskInput">
+        <div className="menu">
           <input
             type="text"
             value={editValue}
@@ -124,7 +124,7 @@ filteredTasks = [
     <div className='parent'>
       <h1>TO-DO List</h1>
       <div className='menu'>
-        <div className='addTask'>
+        <div className={editing ? 'hideAddTask' : 'addTask'}>
           <input
             type="text"
             value={task}

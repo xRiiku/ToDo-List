@@ -26,12 +26,45 @@ ul{
   gap: 5px;
 }
 
-.menu input{
-  height: 30px;
+.hideAddTask{
+  visibility: hidden;
+}
+
+.menu input {
+  background: #fff;
+border: 1px solid var(--light);
+border-radius: 1em;
+-webkit-border-radius: 1em;
+-moz-border-radius: 1em;
+-ms-border-radius: 1em;
+-o-border-radius: 1em;
+box-shadow: 0 2px 24px #0003;
+  font-size: 1.3rem;
+  padding: 1em;
+  width: 90%;
+  outline: none;
+  
 }
 
 .menu button{
-  height: 36px;
+    background: #646FF0;
+    color: white;
+  border: 1px solid var(--light);
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  box-shadow: 0 2px 24px #0003;
+    font-size: 1.3rem;
+    padding: 1em;
+    width: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.menu button:hover{
+  opacity: 0.9;
 }
 
 .taskContainer{
@@ -66,6 +99,7 @@ ul{
   align-items: center;
   text-align: center;
   margin-top: 20px;
+  font-size: 1.5rem;
 }
 
 .trash, .pencil{
@@ -78,8 +112,19 @@ ul{
 }
 
 .selector select{
-  height: 36px;
-  width: 120px;
+  background: #646FF0;
+    color: white;
+  border: 1px solid var(--light);
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  box-shadow: 0 2px 24px #0003;
+    font-size: 1.3rem;
+    padding: 1em;
+    width: 100%;
+    outline: none;
   text-align: center;
 }
 
