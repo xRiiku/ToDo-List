@@ -79,6 +79,11 @@ ul{
   text-align: center;
 }
 
+.taskCompleted{
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
 /* Estilos para pantallas de tamaño pequeño */
 @media (max-width: 767px) {
   .parent {

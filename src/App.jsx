@@ -2,12 +2,14 @@ import './App.css';
 import { useState } from 'react';
 import trash from './assets/trash.svg'
 import pencil from './assets/pencil.svg'
+import { useLocalStorage } from './useLocalStorage';
 
 export default function App() {
-  const [task, setTask] = useState('');
-  const [allTasks, setAllTasks] = useState([]);
-  const [taskId, setTaskId] = useState(1);
-  const [selected, setSelected] = useState('allTasks');
+  // Utiliza el custom hook useLocalStorage para los estados task, allTasks, taskId y selected (Primer valor = Key, segundo valor = valor incial)
+  const [task, setTask] = useLocalStorage('task', '');
+  const [allTasks, setAllTasks] = useLocalStorage('allTasks', []);
+  const [taskId, setTaskId] = useLocalStorage('taskId', 1);
+  const [selected, setSelected] = useLocalStorage('selected', 'allTasks');
   const [editValue, setEditValue] = useState(''); //Estado para mostrar el valor anterior y posterior a la edición
   const [editingTaskId, setEditingTaskId] = useState(null); //Estado para identificar el id de la tarea que se está editando
   const [editing, setEditing] = useState(false); //Estado para identificar si se está editando una tarea o no
@@ -83,7 +85,7 @@ export default function App() {
           <button onClick={cancelEditTask}>Cancel</button>
         </div>
       ) : (
-        <span>{task.name}</span>
+        <span className={task.isChecked ? 'taskCompleted' : ''}>{task.name}</span>
       )}
       {/* Si la Id de la tarea coincide con la tarea que se está editando (editingTaskID) y además se está editando dicha tarea, entonces muestra un input con el valor de la tarea anterior el cual se puede modificar. Si no se está editando, muestra la tarea. */}
 
@@ -110,6 +112,12 @@ export default function App() {
   } else if (selected === 'Uncompleted') {
     filteredTasks = allTasks.filter((task) => !task.isChecked);
   }
+
+  // Mover las tareas completadas al final de la lista
+filteredTasks = [
+  ...filteredTasks.filter((task) => !task.isChecked),
+  ...filteredTasks.filter((task) => task.isChecked)
+];
 
   return (
     <div className='parent'>
