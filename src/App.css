@@ -63,9 +63,15 @@ ul{
   margin-top: 20px;
 }
 
-.trash{
+.trash, .pencil{
   cursor: pointer;
 }
+
+.icons{
+  display: flex;
+  gap: 15px;
+}
+
 
 .selector select{
   height: 36px;
