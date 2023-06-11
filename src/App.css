@@ -49,6 +49,7 @@ ul{
   flex-direction: column;
   border-radius: 16px;
 }
+
 .task{
   background-color: white;
   width: 100%;
@@ -72,9 +73,67 @@ ul{
   gap: 15px;
 }
 
-
 .selector select{
   height: 36px;
   width: 120px;
   text-align: center;
+}
+
+/* Estilos para pantallas de tamaño pequeño */
+@media (max-width: 767px) {
+  .parent {
+    padding: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu input,
+  .menu button {
+    height: 24px;
+  }
+
+  .tasks {
+    padding: 1rem;
+  }
+
+  .task {
+    height: 40px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+
+  .selector select {
+    height: 30px;
+    width: 100px;
+  }
+}
+
+/* Estilos para pantallas de tamaño mediano */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .parent {
+    padding: 2rem;
+  }
+
+  .menu input,
+  .menu button {
+    height: 28px;
+  }
+
+  .tasks {
+    padding: 1.5rem;
+  }
+
+  .task {
+    height: 45px;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+
+  .selector select {
+    height: 32px;
+    width: 110px;
+  }
 }
