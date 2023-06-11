@@ -12,7 +12,7 @@ export default function App() {
   const [selected, setSelected] = useLocalStorage('selected', 'allTasks');
   const [editValue, setEditValue] = useState(''); //Estado para mostrar el valor anterior y posterior a la edición
   const [editingTaskId, setEditingTaskId] = useState(null); //Estado para identificar el id de la tarea que se está editando
-  const [editing, setEditing] = useState(false); //Estado para identificar si se está editando una tarea o no
+  const [editing, setEditing] = useState(false); //Estado para identificar si se está editando una tarea o 
 
   const handleChange = (event) => {
     setTask(event.target.value);
@@ -81,7 +81,7 @@ export default function App() {
             value={editValue}
             onChange={handleEditChange}
           />
-          <button onClick={handleEditTask}>Edit Task</button>
+          <button onClick={handleEditTask}>Add Task</button>
           <button onClick={cancelEditTask}>Cancel</button>
         </div>
       ) : (
