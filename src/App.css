@@ -40,6 +40,10 @@ ul{
   border-radius: 16px;
 }
 
+.hideCheckBox{
+  visibility: hidden;
+}
+
 .tasks{
   background-color: #ECEDF6;
   display: flex;

@@ -70,6 +70,7 @@ export default function App() {
   const renderTask = (task) => (
     <div key={task.id} className='task'>
       <input
+        className={editing ? 'hideCheckBox' : ''}
         type="checkbox"
         checked={task.isChecked}
         onChange={() => handleCheckBoxChange(task.id)}
