@@ -90,7 +90,7 @@ export default function App() {
       )}
       {/* Si la Id de la tarea coincide con la tarea que se está editando (editingTaskID) y además se está editando dicha tarea, entonces muestra un input con el valor de la tarea anterior el cual se puede modificar. Si no se está editando, muestra la tarea. */}
 
-      <div className='icons'>
+      <div className={editing ? 'hideCheckBox' : 'icons'}>
         <img
           className='trash'
           src={trash}
